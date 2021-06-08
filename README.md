@@ -5,7 +5,7 @@ Rolling Scope School - Android 2021 - Stage 1 - Task 2 - Quiz
 
 <img alt="quiz app" src="/img/quiz.gif" width="250" height="500" />
 
-[См. полное видео на YouTube](https://www.youtube.com/watch?v=jG3W5w6pfuw)
+[или см. демо-видео на YouTube](https://www.youtube.com/watch?v=jG3W5w6pfuw)
 
 ## Описание задания
 

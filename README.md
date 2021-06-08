@@ -3,6 +3,10 @@ Rolling Scope School - Android 2021 - Stage 1 - Task 2 - Quiz
 
 :point_up: Во втором практическом задании создадим приложение-квиз, с возможностью шарить результат
 
+<img alt="quiz app" src="/img/quiz.gif" width="250" height="500" />
+
+[См. полное видео на YouTube](https://www.youtube.com/watch?v=jG3W5w6pfuw)
+
 ## Описание задания
 
 Приложение состоит из нескольких экранов с вопросами и экрана с результатом. На экране с вопросом:

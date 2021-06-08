@@ -42,6 +42,6 @@ Rolling Scope School - Android 2021 - Stage 1 - Task 2 - Quiz
 ## Cross-checking
 
 - Изучите требования к <a href="https://docs.rs.school/#/cross-check-flow?id=cross-check">cross-check</a>
-- Форму для оценки задания по критериям ищите <a href="https://ziginsider.github.io/checklist/index.html">здесь</a> ⚡️⚡️⚡️
+- Форму для оценки задания по критериям ищите <a href="https://ziginsider.github.io/checklist/index.html">здесь</a> ⚡️
 
 Успехов! 🤞

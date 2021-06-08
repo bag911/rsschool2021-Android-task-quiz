@@ -35,7 +35,7 @@ Rolling Scope School - Android 2021 - Stage 1 - Task 2 - Quiz
 
 - в прошлый раз мы получали ссылки на view через `findViewById()`. На сегодня это не самый лучший вариант. Давайте использовать [view binding](https://developer.android.com/topic/libraries/view-binding#kotlin) 
 - Kotlin
-- В качестве рекомендации: используйте для этого и других проектов [ktx-library](https://developer.android.com/kotlin/ktx). Это общая практика. Код становится красивее, кодить удобнее... Например, `arguments` для фрагмента можно задавать используя (https://developer.android.com/reference/kotlin/androidx/core/os/package-summary#bundleof)
+- В качестве рекомендации: используйте для этого и других проектов [ktx-library](https://developer.android.com/kotlin/ktx). Это общая практика. Код становится красивее, кодить удобнее... Например, `arguments` для фрагмента можно задавать используя [bundleOf()](https://developer.android.com/reference/kotlin/androidx/core/os/package-summary#bundleof)
 - Старайтесь, чтобы код выглядил читабельно. Следите за форматированием. Лучше разбить логику на несколько методов и дать им осмысленные названия, чем пихать всё в один метод. Не используйте `var` там, где достаточно `val`. Не злоупотребляйте уловками типа `!!` или `lateinit`... Изучайте [Kotlin Coding conventions](https://kotlinlang.org/docs/coding-conventions.html)
 
 

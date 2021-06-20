@@ -14,19 +14,15 @@ import com.rsschool.quiz.R
 import com.rsschool.quiz.databinding.FragmentFourthBinding
 import com.rsschool.quiz.databinding.FragmentThirdBinding
 
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [FirstFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class FourthFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
-    private lateinit var fourthBinding: FragmentFourthBinding
+    private var _fourthBinding: FragmentFourthBinding ? = null
+    private val fourthBinding get() = _fourthBinding!!
 
     private var listener: FragmentNavigation? = null
 
@@ -49,7 +45,7 @@ class FourthFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        fourthBinding = FragmentFourthBinding.inflate(inflater,container,false)
+        _fourthBinding = FragmentFourthBinding.inflate(inflater,container,false)
         return fourthBinding.root
     }
 
@@ -89,22 +85,8 @@ class FourthFragment : Fragment() {
         }
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment FirstFragment.
-         */
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            FirstFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onDestroy() {
+        super.onDestroy()
+        _fourthBinding = null
     }
 }

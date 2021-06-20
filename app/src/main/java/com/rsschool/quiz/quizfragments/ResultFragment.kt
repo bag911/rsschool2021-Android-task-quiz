@@ -17,19 +17,13 @@ import com.rsschool.quiz.MainViewModel
 import com.rsschool.quiz.R
 import com.rsschool.quiz.databinding.FragmentResultBinding
 
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ResultFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ResultFragment : Fragment() {
-    private var param1: String? = null
-    private var param2: String? = null
-    private lateinit var resultBinding: FragmentResultBinding
+
+
+
+    private var _resultBinding: FragmentResultBinding? = null
+    private val resultBinding get() = _resultBinding!!
 
     private var listener:FragmentNavigation? = null
 
@@ -40,19 +34,12 @@ class ResultFragment : Fragment() {
         listener = context as FragmentNavigation
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        resultBinding = FragmentResultBinding.inflate(inflater,container,false)
+        _resultBinding = FragmentResultBinding.inflate(inflater,container,false)
         return resultBinding.root
     }
 
@@ -61,11 +48,6 @@ class ResultFragment : Fragment() {
         val res = compareAnswers()
         "Your result is ${res}%".also { resultBinding.textView.text = it }
 
-        Log.d("radioB","1 - ${mainViewModel.firstAnswer}; " +
-                "2 - ${mainViewModel.secondAnswer}; " +
-                "3 - ${mainViewModel.thirdAnswer}; " +
-                "4 - ${mainViewModel.fourthAnswer}; " +
-                "5 - ${mainViewModel.fifthAnswer}; ")
         resultBinding.closeBtn.setOnClickListener{
             activity?.finish()
         }
@@ -73,7 +55,8 @@ class ResultFragment : Fragment() {
             val arrayOfQuestions = resources.getStringArray(R.array.questionsArray)
             val i = Intent(Intent.ACTION_SEND)
                 .setType("plain/text")
-                .putExtra(Intent.EXTRA_TEXT,"${arrayOfQuestions[0]}: \n${mainViewModel.firstAnswer}; \n\n" +
+                .putExtra(Intent.EXTRA_TEXT,"Your result is ${res}%\n\n" +
+                        "${arrayOfQuestions[0]}: \n${mainViewModel.firstAnswer}; \n\n" +
                         "${arrayOfQuestions[1]}: \n ${mainViewModel.secondAnswer}; \n\n" +
                         "${arrayOfQuestions[2]}: \n ${mainViewModel.thirdAnswer}; \n\n" +
                         "${arrayOfQuestions[3]}: \n ${mainViewModel.fourthAnswer}; \n\n" +
@@ -97,22 +80,10 @@ class ResultFragment : Fragment() {
         return result
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ResultFragment.
-         */
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ResultFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onDestroy() {
+        super.onDestroy()
+        _resultBinding = null
     }
+
+
 }

@@ -8,6 +8,4 @@ interface FragmentNavigation {
     fun goToFifthFrag()
     fun goToResultFrag()
     fun restartAll()
-    fun shareResults()
-    fun backPress(frag:Int)
  }

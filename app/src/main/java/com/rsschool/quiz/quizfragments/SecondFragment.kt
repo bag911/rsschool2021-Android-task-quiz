@@ -66,9 +66,12 @@ class SecondFragment : Fragment() {
         checkRadioButtons()
         secondBinding.previousBtn.setOnClickListener {
             listener?.goToFirstFrag()
+            findNavController().navigate(R.id.action_secondFragment_to_firstFragment)
+
         }
         secondBinding.nextBtn.setOnClickListener{
             listener?.goToThirdFrag()
+            findNavController().navigate(R.id.action_secondFragment_to_thirdFragment)
         }
     }
 

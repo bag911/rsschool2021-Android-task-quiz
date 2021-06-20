@@ -60,6 +60,7 @@ class FirstFragment : Fragment() {
         checkRadioButtons()
         firstBinding.nextBtn.setOnClickListener {
             listener?.goToSecondFrag()
+            findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
         }
     }
 
@@ -85,9 +86,6 @@ class FirstFragment : Fragment() {
         }
     }
 
-    private fun enableNextButton() {
-        TODO("Not yet implemented")
-    }
 
     companion object {
 

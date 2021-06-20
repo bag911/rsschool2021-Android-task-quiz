@@ -6,24 +6,24 @@
     android:layout_height="match_parent"
     android:theme="@style/Theme.Quiz.Third">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/appBarLayout"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:fitsSystemWindows="true"
-            app:navigationContentDescription="Back to the previous question"
-            app:navigationIcon="@drawable/ic_baseline_chevron_left_24"
-            app:title="Question 3" />
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:fitsSystemWindows="true"-->
+<!--            app:navigationContentDescription="Back to the previous question"-->
+<!--            app:navigationIcon="@drawable/ic_baseline_chevron_left_24"-->
+<!--            app:title="Question 3" />-->
 
-    </com.google.android.material.appbar.AppBarLayout>
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,7 +38,7 @@
         app:layout_constraintBottom_toTopOf="@+id/previousBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/margin_start_guideline"
@@ -114,8 +114,8 @@
                 android:id="@+id/option_four"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:checked="true"
                 android:textSize="16sp"
+                tools:checked="true"
                 tools:text="Option 4" />
 
             <RadioButton

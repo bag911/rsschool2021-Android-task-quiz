@@ -59,10 +59,11 @@ class FourthFragment : Fragment() {
         checkRadioButtons()
         fourthBinding.previousBtn.setOnClickListener {
             listener?.goToThirdFrag()
+            findNavController().navigate(R.id.action_fourthFragment_to_thirdFragment)
         }
         fourthBinding.nextBtn.setOnClickListener{
             listener?.goToFifthFrag()
-
+            findNavController().navigate(R.id.action_fourthFragment_to_fifthFragment)
         }
     }
 

@@ -1,75 +1,79 @@
 package com.rsschool.quiz
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.widget.Toast
-import androidx.appcompat.app.ActionBar
-import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.rsschool.quiz.databinding.ActivityMainBinding
-import com.rsschool.quiz.quizfragments.*
-import javax.xml.namespace.NamespaceContext
+import com.rsschool.quiz.quizfragments.FragmentNavigation
+
 
 class MainActivity : AppCompatActivity(), FragmentNavigation {
 
-    private lateinit var binding:ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 //
-//        val host = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
-//        val navController = host.navController
-//        val appBarConfiguration = AppBarConfiguration(navController.graph)
-//        binding.toolbar.setupWithNavController(navController,appBarConfiguration)
+        val host =
+            supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        val navController = host.navController
+        val appBarConfiguration = AppBarConfiguration(navController.graph)
+        binding.toolbar.setupWithNavController(navController, appBarConfiguration)
+
     }
 
-    fun openFirstFragment(){
+    fun openFirstFragment() {
         window.statusBarColor = resources.getColor(R.color.title_text)
         setTheme(R.style.Theme_Quiz_First)
-        val firstFragment = FirstFragment()
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragmentContainerView,firstFragment).commit()
+        binding.appBarLayout.setBackgroundColor(resources.getColor(R.color.secondary_text))
+        binding.toolbarTitle.text = getString(R.string.question_1)
+        binding.appBarLayout.visibility = View.VISIBLE
+
     }
 
-    fun openSecondFragment(){
+    fun openSecondFragment() {
         window.statusBarColor = resources.getColor(R.color.title_text_second)
-        val secondFragment = SecondFragment()
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragmentContainerView,secondFragment,"2").commit()
+        setTheme(R.style.Theme_Quiz_Second)
+        binding.appBarLayout.setBackgroundColor(resources.getColor(R.color.secondary_text_second))
+        binding.toolbarTitle.text = getString(R.string.question_2)
+        binding.appBarLayout.visibility = View.VISIBLE
+
     }
 
-    fun openThirdFragment(){
+    fun openThirdFragment() {
         window.statusBarColor = resources.getColor(R.color.title_text_third)
-        val thirdFragment = ThirdFragment()
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragmentContainerView,thirdFragment,"3").commit()
+        setTheme(R.style.Theme_Quiz_Third)
+        binding.appBarLayout.setBackgroundColor(resources.getColor(R.color.secondary_text_third))
+        binding.toolbarTitle.text = getString(R.string.question_3)
+        binding.appBarLayout.visibility = View.VISIBLE
+
     }
 
-    fun openFourthFragment(){
+    fun openFourthFragment() {
         window.statusBarColor = resources.getColor(R.color.title_text_fourth)
-        val fourthFragment = FourthFragment()
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragmentContainerView,fourthFragment,"4").commit()
+        setTheme(R.style.Theme_Quiz_Fourth)
+        binding.appBarLayout.setBackgroundColor(resources.getColor(R.color.secondary_text_fourth))
+        binding.toolbarTitle.text = getString(R.string.question_4)
+        binding.appBarLayout.visibility = View.VISIBLE
+
     }
 
-    fun openFifthFragment(){
+    fun openFifthFragment() {
         window.statusBarColor = resources.getColor(R.color.title_text_fifth)
-        val fifthFragment = FifthFragment()
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragmentContainerView,fifthFragment,"5").commit()
+        setTheme(R.style.Theme_Quiz_Fifth)
+        binding.appBarLayout.setBackgroundColor(resources.getColor(R.color.secondary_text_fifth))
+        binding.toolbarTitle.text = getString(R.string.question_5)
+        binding.appBarLayout.visibility = View.VISIBLE
     }
 
     private fun openResultFragment() {
-        val resultFragment = ResultFragment()
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragmentContainerView,resultFragment).commit()
+        binding.appBarLayout.visibility = View.GONE
 
     }
 
@@ -102,27 +106,5 @@ class MainActivity : AppCompatActivity(), FragmentNavigation {
         startActivity(intent)
     }
 
-    override fun shareResults() {
-       // TODO("Not yet implemented")
-    }
-
-    override fun backPress(frag:Int) {
-        onBackPressed()
-    }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-//        val fragment2 = supportFragmentManager.findFragmentByTag("2")
-//        val fragment3 = supportFragmentManager.findFragmentByTag("3")
-//        val fragment4 = supportFragmentManager.findFragmentByTag("4")
-//        val fragment5 = supportFragmentManager.findFragmentByTag("5")
-//        when {
-//            fragment2!!.isVisible -> openFirstFragment()
-//            fragment3!!.isVisible -> openSecondFragment()
-//            fragment4!!.isVisible -> openThirdFragment()
-//            fragment5!!.isVisible -> openFourthFragment()
-//            else -> super.onBackPressed()
-        }
-    }
 
 }

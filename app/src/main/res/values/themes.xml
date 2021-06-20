@@ -6,22 +6,73 @@
     </style>
 
     <style name="Theme.Quiz.First" parent="Theme.Quiz">
-        <item name="colorPrimary">@color/deep_orange_100</item>
+        <item name="colorPrimary">@color/secondary_text</item>
         <item name="colorPrimaryDark">@color/deep_orange_100_dark</item>
         <item name="colorPrimaryVariant">@color/deep_orange_100_dark</item>
         <item name="colorSecondary">@color/deep_orange_100</item>
         <item name="colorSecondaryVariant">@color/deep_orange_100_light</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/deep_orange_100_dark</item>
+        <item name="android:statusBarColor">@color/secondary_text</item>
+
+        <item name="android:textColorTertiary">@color/title_text</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/secondary_text</item>
+        <item name="buttonTint">@color/title_text</item>
+
     </style>
 
     <style name="Theme.Quiz.Second" parent="Theme.Quiz">
-        <item name="colorPrimary">@color/yellow_100</item>
-        <item name="colorPrimaryDark">@color/yellow_100_dark</item>
-        <item name="colorPrimaryVariant">@color/yellow_100_dark</item>
-        <item name="colorSecondary">@color/yellow_100</item>
-        <item name="colorSecondaryVariant">@color/yellow_100_light</item>
+        <item name="colorPrimary">@color/secondary_text_second</item>
+        <item name="colorPrimaryDark">@color/deep_orange_100_dark</item>
+        <item name="colorPrimaryVariant">@color/deep_orange_100_dark</item>
+        <item name="colorSecondary">@color/deep_orange_100</item>
+        <item name="colorSecondaryVariant">@color/deep_orange_100_light</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/yellow_100_dark</item>
+        <item name="android:statusBarColor">@color/secondary_text_second</item>
+
+        <item name="android:textColorTertiary">@color/title_text_second</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/secondary_text_second</item>
+        <item name="buttonTint">@color/title_text_second</item>
+    </style>
+
+    <style name="Theme.Quiz.Third" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/secondary_text_third</item>
+        <item name="colorPrimaryDark">@color/deep_orange_100_dark</item>
+        <item name="colorPrimaryVariant">@color/deep_orange_100_dark</item>
+        <item name="colorSecondary">@color/deep_orange_100</item>
+        <item name="colorSecondaryVariant">@color/deep_orange_100_light</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/secondary_text_third</item>
+
+        <item name="android:textColorTertiary">@color/title_text_third</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/secondary_text_third</item>
+        <item name="buttonTint">@color/title_text_third</item>
+    </style>
+
+    <style name="Theme.Quiz.Fourth" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/secondary_text_fourth</item>
+        <item name="colorPrimaryDark">@color/deep_orange_100_dark</item>
+        <item name="colorPrimaryVariant">@color/deep_orange_100_dark</item>
+        <item name="colorSecondary">@color/deep_orange_100</item>
+        <item name="colorSecondaryVariant">@color/deep_orange_100_light</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/secondary_text_fourth</item>
+
+        <item name="android:textColorTertiary">@color/title_text_fourth</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/secondary_text_fourth</item>
+        <item name="buttonTint">@color/title_text_fourth</item>
+    </style>
+
+    <style name="Theme.Quiz.Fifth" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/secondary_text_fifth</item>
+        <item name="colorPrimaryDark">@color/deep_orange_100_dark</item>
+        <item name="colorPrimaryVariant">@color/deep_orange_100_dark</item>
+        <item name="colorSecondary">@color/deep_orange_100</item>
+        <item name="colorSecondaryVariant">@color/deep_orange_100_light</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/secondary_text_fifth</item>
+
+        <item name="android:textColorTertiary">@color/title_text_fifth</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/secondary_text_fifth</item>
+        <item name="buttonTint">@color/title_text_fifth</item>
     </style>
 </resources>

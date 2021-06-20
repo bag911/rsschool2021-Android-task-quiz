@@ -4,7 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="deep_orange_100">#ffccbc</color>
     <color name="deep_orange_100_light">#ffffee</color>
-    <color name="deep_orange_100_dark">#cb9b8c</color>
+    <color name="deep_orange_100_dark">#CB8C9B</color>
     <color name="yellow_100">#fff9c4</color>
     <color name="yellow_100_light">#fffff7</color>
     <color name="yellow_100_dark">#cbc693</color>
@@ -17,4 +17,19 @@
     <color name="deep_purple_100">#d1c4e9</color>
     <color name="deep_purple_100_light">#fff7ff</color>
     <color name="deep_purple_100_dark">#a094b7</color>
+
+    <color name="title_text">#280d5f</color>
+    <color name="secondary_text">#7a6eaa</color>
+
+    <color name="title_text_second">#1fc7d4</color>
+    <color name="secondary_text_second">#80EAF3</color>
+
+    <color name="title_text_third">#ffa000</color>
+    <color name="secondary_text_third">#ffd149</color>
+
+    <color name="title_text_fourth">#00c853</color>
+    <color name="secondary_text_fourth">#50B868</color>
+
+    <color name="title_text_fifth">#0039cb</color>
+    <color name="secondary_text_fifth">#2962ff</color>
 </resources>

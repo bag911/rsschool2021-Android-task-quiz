@@ -28,7 +28,7 @@
         android:id="@+id/scroll"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/previous_button"
+        app:layout_constraintBottom_toTopOf="@id/previousBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appBarLayout">
@@ -120,7 +120,7 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/previous_button"
+        android:id="@+id/previousBtn"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -129,7 +129,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/next_button"
+        android:id="@+id/nextBtn"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
